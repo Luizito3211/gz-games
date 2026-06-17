@@ -12,6 +12,10 @@
     <header class="hero">
         <nav class="topbar">
             <strong class="logo">GZ Games</strong>
+            <div class="auth-status">
+                <span id="auth-user">Visitante</span>
+                <button id="logout-button" type="button">Sair</button>
+            </div>
         </nav>
     </header>
 
@@ -113,6 +117,35 @@
         </section>
     </main>
 
+    <section class="ad-carousel" aria-label="Anuncios">
+        <div class="ad-carousel-track">
+            <div class="ad-slide" aria-label="Anuncio 01">
+                <img src="Ad/WhatsApp Image 2026-06-17 at 19.25.39.jpeg" alt="Anuncio 01">
+            </div>
+            <div class="ad-slide" aria-label="Anuncio 02">
+                <img src="Ad/WhatsApp Image 2026-06-17 at 19.26.01.jpeg" alt="Anuncio 02">
+            </div>
+            <div class="ad-slide" aria-label="Anuncio 03">
+                <img src="Ad/WhatsApp Image 2026-06-17 at 19.27.45.jpeg" alt="Anuncio 03">
+            </div>
+            <div class="ad-slide" aria-label="Anuncio 04">
+                <img src="Ad/WhatsApp Image 2026-06-17 at 19.29.04.jpeg" alt="Anuncio 04">
+            </div>
+            <div class="ad-slide" aria-label="Anuncio 01" aria-hidden="true">
+                <img src="Ad/WhatsApp Image 2026-06-17 at 19.25.39.jpeg" alt="">
+            </div>
+            <div class="ad-slide" aria-label="Anuncio 02" aria-hidden="true">
+                <img src="Ad/WhatsApp Image 2026-06-17 at 19.26.01.jpeg" alt="">
+            </div>
+            <div class="ad-slide" aria-label="Anuncio 03" aria-hidden="true">
+                <img src="Ad/WhatsApp Image 2026-06-17 at 19.27.45.jpeg" alt="">
+            </div>
+            <div class="ad-slide" aria-label="Anuncio 04" aria-hidden="true">
+                <img src="Ad/WhatsApp Image 2026-06-17 at 19.29.04.jpeg" alt="">
+            </div>
+        </div>
+    </section>
+
     <button class="chat-toggle" id="chat-toggle" type="button" aria-label="Abrir atendimento">
         <img src="assets/bitmoji.gif" alt="" aria-hidden="true">
     </button>
@@ -147,6 +180,65 @@
 
             <button type="submit">Enviar</button>
         </form>
+    </section>
+
+    <section class="auth-modal" id="auth-modal" aria-label="Acesso do usuario">
+        <div class="auth-card">
+            <div class="auth-tabs" role="tablist" aria-label="Opcoes de acesso">
+                <button class="auth-tab active" type="button" data-auth-tab="login">Login</button>
+                <button class="auth-tab" type="button" data-auth-tab="register">Cadastro</button>
+                <button class="auth-tab" type="button" data-auth-tab="forgot">Esqueci</button>
+            </div>
+
+            <form class="auth-form active" id="login-form">
+                <h2>Entrar</h2>
+                <label>
+                    Usuario
+                    <input id="login-user" type="text" autocomplete="username" required>
+                </label>
+                <label>
+                    Senha
+                    <input id="login-password" type="password" autocomplete="current-password" required>
+                </label>
+                <button type="submit">Entrar</button>
+            </form>
+
+            <form class="auth-form" id="register-form">
+                <h2>Cadastrar</h2>
+                <label>
+                    Usuario
+                    <input id="register-user" type="text" autocomplete="username" required>
+                </label>
+                <label>
+                    Senha
+                    <input id="register-password" type="password" autocomplete="new-password" required>
+                </label>
+                <label>
+                    Palavra de recuperacao
+                    <input id="register-recovery" type="text" autocomplete="off" required>
+                </label>
+                <button type="submit">Criar conta</button>
+            </form>
+
+            <form class="auth-form" id="forgot-form">
+                <h2>Recuperar senha</h2>
+                <label>
+                    Usuario
+                    <input id="forgot-user" type="text" autocomplete="username" required>
+                </label>
+                <label>
+                    Palavra de recuperacao
+                    <input id="forgot-recovery" type="text" autocomplete="off" required>
+                </label>
+                <label>
+                    Nova senha
+                    <input id="forgot-password" type="password" autocomplete="new-password" required>
+                </label>
+                <button type="submit">Trocar senha</button>
+            </form>
+
+            <p class="auth-message" id="auth-message" role="status" aria-live="polite"></p>
+        </div>
     </section>
 
     <script src="script.js"></script>
