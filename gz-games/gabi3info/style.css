@@ -102,8 +102,11 @@ button {
     white-space: nowrap;
 }
 
-.auth-status button {
+.auth-status button,
+.discord-button {
     min-height: 38px;
+    display: inline-flex;
+    align-items: center;
     padding: 0 14px;
     border: 1px solid var(--line);
     border-radius: 8px;
@@ -113,8 +116,15 @@ button {
     font-weight: 800;
 }
 
+.discord-button {
+    text-decoration: none;
+    background: linear-gradient(135deg, #5865f2, #3641b7);
+}
+
 .auth-status button:hover,
-.auth-status button:focus-visible {
+.auth-status button:focus-visible,
+.discord-button:hover,
+.discord-button:focus-visible {
     border-color: var(--blue-light);
     box-shadow: 0 0 18px rgba(98, 216, 255, 0.18);
     outline: none;
